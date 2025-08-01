@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block main %}
+    <div class="slider-container">
+      <div class="slider-images">
+        <img src="{{ url_for( 'static' , filename= "images/funshareslide.jpg" )}}" class="slide active" alt="Slide 1">
+        <img src="{{ url_for( 'static' , filename= "images/funshareslide2.jpg" )}}" class="slide" alt="Slide 2">
+        <img src="{{ url_for( 'static' , filename= "images/funshareslide3.jpg" )}}" class="slide" alt="Slide 3">
+      </div>
+      <button type="button" class="slider-btn prev">&#10094;</button>
+      <button type="button" class="slider-btn next">&#10095;</button>
+    </div>
+    <div class="split-bill-container">
+      <div class="split-bill-section">
+        <h2>Leave Us a Review</h2>
+        <p>We would love to hear your thoughts on how we can improve FunShare.</p>
+    
+      <form action="{{ url_for('reviews') }}" method="POST" id="reviewForm">
+        <input type="text" name="name" placeholder="Your name (optional)">
+      
+        <textarea name="review" rows="5" placeholder="Write your review here..." required></textarea>
+      
+        <button type="submit">Submit Review</button>
+      
+        {% if message %}
+        <p class="success">{{ message }}</p>
+        {% endif %}
+      </form>
+    </div>
+    <div class="split-bill-container">
+      <div class="split-bill-section">
+        <h3>What Others Are Saying</h3>
+        <ul class="review-list">
+          {% for review in reviews %}
+          <li>
+            <strong>{{ review.name }}:</strong>
+            <p>{{ review.text }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endblock %}

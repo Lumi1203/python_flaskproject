@@ -21,5 +21,8 @@ https://github.com/Lumi1203/python_flaskproject.git
 Recently Added functionalities:
 A Review page has been added to the Funshare web app, allowing users to leave feedback about their experience using the web application. This feature helps gather suggestions for improvements and enhances user engagement by encouraging participation in the development process.
 
+The Dark mode toggle button has been improved allowing user’s choice to works consistently across all pages of the web app. By storing the preference in cookies and using Python with Jinja2 templates, the site remembers the theme even when users navigate between pages or return later. This update makes the user experience smoother and more personalized without adding extra complexity on the client side.
+
+
 Link to Render:
 -----

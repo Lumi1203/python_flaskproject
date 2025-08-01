@@ -2,6 +2,25 @@ from flask import Flask, render_template, request, redirect, make_response, url_
 
 app = Flask(__name__)
 
+user_reviews = [
+    {
+        "name": "Baver Tas",
+        "text": "I have been using this app for a while now, and I must say, it has made splitting bills with friends and family incredibly easy. The interface is straightforward. Highly recommend it!"
+    },
+    {
+        "name": "Comfort",
+        "text": "The design of this app is so clean and user-friendly. It is perfect for managing expenses within groups."
+    },
+    {
+        "name": "Bamidele",
+        "text": "Using this app has genuinely made managing shared expenses fun and stress-free. The simplicity of the design and functionality means I spend less time calculating and more time enjoying time with my friends. Great job on making this tool so effective and easy to use!"
+    },
+    {
+        "name": "Thierry",
+        "text": "I appreciate how straightforward this app is. It’s effective without being complicated, which makes it perfect for anyone who just wants to get the job done quickly. Keep up the excellent work Lumi!"
+    }
+]
+
 def get_theme():
     return request.cookies.get('theme', 'light')
 
@@ -14,9 +33,21 @@ def index():
 def signup():
   return render_template("signup.html" , theme=get_theme())
 
+
 @app.route("/referafriend.html")
 def referafriend():
   return render_template("referafriend.html" , theme=get_theme())
+
+@app.route("/reviews.html", methods=['GET', 'POST'])
+def reviews():
+    message = ""
+    if request.method == 'POST':
+        name = request.form.get('name') or "Anonymous"
+        review = request.form.get('review')
+        if review:
+            user_reviews.append({"name": name, "text": review})
+            message = "Thanks for your review!"
+    return render_template("reviews.html", theme=get_theme(), reviews=user_reviews, message=message)
 
 @app.route('/toggle-theme')
 def toggle_theme():
@@ -25,3 +56,4 @@ def toggle_theme():
     response = make_response(redirect(request.referrer or url_for('index')))
     response.set_cookie('theme', new_theme, max_age=28*24*60*60)
     return response
+
