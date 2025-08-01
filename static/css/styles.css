@@ -305,7 +305,7 @@ select {
   right: 10px;
 }
 
-body.dark-mode {
+/* body.dark-mode {
   background-color: #3b3a3a;
   color: #343232;
 }
@@ -324,7 +324,40 @@ body.dark-mode #darkModeToggle {
   border-radius: 5px;
   font-size: 1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --toggle-bg: #333;
+  --toggle-text: #fff;
 }
+
+[data-theme="dark"] {
+  --bg-color: #3b3a3a;
+  --text-color: #343232;
+  --toggle-bg: #f0f0f0;
+  --toggle-text: #2e2e2e;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+#darkModeToggle {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border: none;
+  background-color: var(--toggle-bg);
+  color: var(--toggle-text);
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
 ul#friendList button {
   background: #f44336;
   color: white;

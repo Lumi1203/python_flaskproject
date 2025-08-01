@@ -18,5 +18,8 @@ Link to GitHub repository:
 https://github.com/Lumi1203/python_flaskproject.git
 
 
+Recently Added functionalities:
+A Review page has been added to the Funshare web app, allowing users to leave feedback about their experience using the web application. This feature helps gather suggestions for improvements and enhances user engagement by encouraging participation in the development process.
+
 Link to Render:
 -----
