@@ -1,0 +1,456 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  padding: 1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #4caf50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-title {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  margin-top: 1rem;
+}
+
+.add-friend-section {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #4caf50;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+ul#friendList {
+  margin-top: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+ul#friendList li {
+  background: #e3f2fd;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.popup-section {
+  background: #ffffff;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 600px) {
+ /*nav ul {
+    justify-content: center;
+    gap: 2rem;
+  }*/
+
+  .add-friend-section {
+    max-width: 400px;
+    margin: auto;
+  }
+}
+
+ul#friendList li {
+  background: #e0f7fa;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.add-friend-button-section {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.add-friend-button-section button {
+  background: #2196f3;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-friend-button-section button:hover {
+  background: #ff9800;
+}
+
+select {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.signup-section {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.signup-section button {
+  background: #ff9800;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signup-section button:hover {
+  background: #fb8c00;
+}
+
+#signupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #fff3e0;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-section {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.login-section button {
+  background: #ff9800;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-section button:hover {
+  background: #fb8c00;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #fff3e0;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.split-bill-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #cdedd8;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: auto;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.split-bill-section h2,
+.split-bill-section p {
+  text-align: center;
+}
+
+
+.welcome-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.success {
+  color: green;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.slider-container {
+  position: relative;
+  max-width: 800px;
+  margin: 1rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  /*max-height: 300px;*/
+}
+
+.slider-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  display: none;
+  object-fit: cover;
+  height: 200px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 30%;
+  transition: background 0.3s;
+}
+
+.slider-btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+body.dark-mode {
+  background-color: #3b3a3a;
+  color: #343232;
+}
+
+body.dark-mode #darkModeToggle {
+  background-color: #f0f0f0;
+  color: #2e2e2e;
+}
+#darkModeToggle {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+ul#friendList button {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 5px;
+  margin-left: 1rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+ul#friendList button:hover {
+  background: #d32f2f;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    padding: 2rem;
+  }
+
+  header {
+    text-align: left;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-title {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  nav ul {
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+
+  main {
+    margin-top: 2rem;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slider-container {
+    max-width: 720px;
+    height: 300px;
+  }
+
+  .slide {
+    height: 300px;
+  }
+
+  form {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .split-bill-section {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 3rem 5rem;
+  }
+
+  header {
+    text-align: left;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-title {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  nav ul {
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+
+  header {
+    padding: 2rem 5rem;
+  }
+
+  .logo-title {
+    gap: 1.5rem;
+  }
+
+  nav ul {
+    gap: 3rem;
+  }
+
+  main {
+    max-width: 960px;
+    margin: 3rem auto;
+  }
+
+  .slider-container {
+    max-width: 960px;
+    height: 400px;
+  }
+
+  .slide {
+    height: 400px;
+  }
+
+  form {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .split-bill-section {
+    max-width: 600px;
+  }
+
+  .login-section, .add-friend-section {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block main %}
+    <div class="slider-container">
+      <div class="slider-images">
+        <img src="{{ url_for( 'static' , filename= "images/funshareslide.jpg" )}}" class="slide active" alt="Slide 1">
+        <img src="{{ url_for( 'static' , filename= "images/funshareslide2.jpg" )}}" class="slide" alt="Slide 2">
+        <img src="{{ url_for( 'static' , filename= "images/funshareslide3.jpg" )}}" class="slide" alt="Slide 3">
+      </div>
+      <button type="button" class="slider-btn prev">&#10094;</button>
+      <button type="button" class="slider-btn next">&#10095;</button>
+    </div>
+    <div class="split-bill-container">
+      <div class="split-bill-section">
+        <h2>Refer a Friend</h2>
+        <p>Invite a friend to join FunShare!</p>
+        <form id="referForm">
+          <select id="referralMethod" required>
+            <option value="">- Choose Refer Method -</option>
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+          </select>
+          <input type="text" id="referralInput" placeholder="Enter email or phone" required>
+          <button type="submit">Refer Now</button>
+          <p id="referError" class="error"></p>
+          <p id="referSuccess" class="success"></p>
+        </form>
+      </div>
+    </div>
+{% endblock %}

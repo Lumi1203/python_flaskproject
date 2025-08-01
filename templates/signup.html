@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block main %}
+    <div class="slider-container">
+      <div class="slider-images">
+        <img src="{{ url_for( 'static' , filename= "images/funshareslide.jpg" )}}" class="slide active" alt="Slide 1">
+        <img src="{{ url_for( 'static' , filename= "images/funshareslide2.jpg" )}}" class="slide" alt="Slide 2">
+        <img src="{{ url_for( 'static' , filename= "images/funshareslide3.jpg" )}}" class="slide" alt="Slide 3">
+      </div>
+      <button type="button" class="slider-btn prev">&#10094;</button>
+      <button type="button" class="slider-btn next">&#10095;</button>
+    </div>
+    <p id="welcomeMessage" class="welcome-message"></p>
+    <div class="signup-section">
+      <button  type="button" id="showSignupForm">Sign Up</button>
+      <form id="signupForm" class="hidden">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        <button type="submit">Register</button>
+        <p id="signupError" class="error"></p>
+      </form>
+    </div>
+{% endblock %}
