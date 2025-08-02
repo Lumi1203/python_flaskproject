@@ -112,7 +112,7 @@ footer {
   border-radius: 8px;
 }
 
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
   /*nav ul {
     justify-content: center;
     gap: 2rem;
@@ -122,7 +122,7 @@ footer {
     max-width: 400px;
     margin: auto;
   }
-}
+} */
 
 ul#friendList li {
   background: #e0f7fa;
@@ -190,6 +190,24 @@ select {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+#signupForm input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .login-section {
   margin: 1.5rem 0;
   text-align: center;
@@ -217,8 +235,25 @@ select {
   padding: 1rem;
   border-radius: 8px;
   margin-top: 1rem;
+  font-size: 1rem;
+  box-sizing: border-box;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+} 
+
+#loginForm input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box; /* Important for equal sizing */
 }
+
+#loginForm {
+  /* max-width: 300px; */
+  margin: 1rem auto;
+}
+
 
 .split-bill-section {
   display: flex;
