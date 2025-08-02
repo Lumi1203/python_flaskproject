@@ -21,6 +21,22 @@ user_reviews = [
     }
 ]
 
+
+faqs = [
+    {
+        "question": "How does FunShare work?",
+        "answer": "FunShare allows you to split bills easily with friends. You enter the amounts, select who owes what, and the app does the rest."
+    },
+    {
+        "question": "Is FunShare free to use?",
+        "answer": "Yes, FunShare is completely free to use with all its core features available to everyone."
+    },
+    {
+        "question": "Can I use FunShare without creating an account?",
+        "answer": "You can explore the app without signing up, but you’ll need an account to save or share any bill splits."
+    }
+]
+
 def get_theme():
     return request.cookies.get('theme', 'light')
 
@@ -37,6 +53,10 @@ def signup():
 @app.route("/referafriend.html")
 def referafriend():
   return render_template("referafriend.html" , theme=get_theme())
+
+@app.route("/faqs.html")
+def faqs_page():
+  return render_template("faqs.html" , theme=get_theme(), faqs=faqs)
 
 @app.route("/reviews.html", methods=['GET', 'POST'])
 def reviews():

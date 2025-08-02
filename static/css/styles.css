@@ -485,18 +485,17 @@ ul#friendList button:hover {
   }
 }
 
-/* Container for the whole review page content */
+
 .review-page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem; /* space between the form and reviews */
+  gap: 2rem; 
   max-width: 700px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-/* Review form container */
 .review-form-container {
   background: #cdedd8;
   padding: 2rem 2.5rem;
@@ -553,7 +552,7 @@ ul#friendList button:hover {
   gap: 1.5rem;
 }
 
-.reviews-list-container h3 {
+.reviews-list-container h3, h2 {
   text-align: center;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -592,4 +591,11 @@ ul#friendList button:hover {
   font-weight: 600;
   text-align: center;
   margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
 }

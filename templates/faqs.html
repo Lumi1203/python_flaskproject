@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block main %}
+    <div class="slider-container">
+      <div class="slider-images">
+        <img src="{{ url_for( 'static' , filename= "images/funshareslide.jpg" )}}" class="slide active" alt="Slide 1">
+        <img src="{{ url_for( 'static' , filename= "images/funshareslide2.jpg" )}}" class="slide" alt="Slide 2">
+        <img src="{{ url_for( 'static' , filename= "images/funshareslide3.jpg" )}}" class="slide" alt="Slide 3">
+      </div>
+      <button type="button" class="slider-btn prev">&#10094;</button>
+      <button type="button" class="slider-btn next">&#10095;</button>
+    </div>
+    </div>
+      <div class="review-page-container">
+        <div class="reviews-list-container">
+          <h2>Frequently Asked Questions</h2>
+          <ul class="review-list">
+            {% for item in faqs %}
+            <li>
+              <strong>{{ item.question }}</strong>
+              <p>{{ item.answer }}</p>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+  </div>
+{% endblock %}
