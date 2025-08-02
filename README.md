@@ -1,4 +1,11 @@
 # python_flaskproject
+
+Link to Render:
+https://python-flaskproject.onrender.com/
+
+Link to GitHub repository:
+https://github.com/Lumi1203/python_flaskproject.git
+
 Funshare is user-friendly web application designed to simplify the often-complicated task of splitting shared expenses among friends, roommates, or social groups. Whether you're at a football game, enjoying drinks at the pub, or sharing utility bills in a household, Funshare ensures that every user can easily track and split bills fairly with just a few clicks
 
 Funshare can be found on render: -----
@@ -14,6 +21,9 @@ Encourage user growth via a "Refer a Friend" feature.
 Make the bill-splitting process fast, transparent, and conflict-free.
 
 
+Link to Render:
+https://python-flaskproject.onrender.com/
+
 Link to GitHub repository:
 https://github.com/Lumi1203/python_flaskproject.git
 
@@ -25,4 +35,7 @@ The Dark mode toggle button has been improved allowing user’s choice to works 
 
 
 Link to Render:
------
+https://python-flaskproject.onrender.com/
+
+Link to GitHub repository:
+https://github.com/Lumi1203/python_flaskproject.git
