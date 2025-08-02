@@ -9,8 +9,8 @@
       <button type="button" class="slider-btn prev">&#10094;</button>
       <button type="button" class="slider-btn next">&#10095;</button>
     </div>
-    <div class="split-bill-container">
-      <div class="split-bill-section">
+    <div class="review-page-container">
+      <div class="review-form-container">
         <h2>Leave Us a Review</h2>
         <p>We would love to hear your thoughts on how we can improve FunShare.</p>
     
@@ -26,8 +26,7 @@
         {% endif %}
       </form>
     </div>
-    <div class="split-bill-container">
-      <div class="split-bill-section">
+      <div class="reviews-list-container">
         <h3>What Others Are Saying</h3>
         <ul class="review-list">
           {% for review in reviews %}
@@ -38,6 +37,5 @@
           {% endfor %}
         </ul>
       </div>
-    </div>
   </div>
 {% endblock %}
